@@ -1,0 +1,50 @@
+clc;
+clear;
+clear s
+
+s = serialport('COM6', 9600);
+pause(2)
+
+steps_for_1 = 2048/4;
+
+pause(5);
+
+steps_for_2 = -2048;
+
+pause(5);  
+
+steps_for_2 = 2048;
+
+pause(5);
+
+steps_for_1 = -2048/4;
+
+steps_for_2 = -2048;
+
+pause(5);  
+
+steps_for_2 = 2048;
+
+pause(5);
+
+steps_for_1 = 2048/2;
+
+pause(5);  
+
+% Rotate the plate back to the original position
+steps_for_1 = (-2048/2);
+
+% Rotate the plate 270 degrees
+steps_for_1 = (3 * (2048/4));
+
+% Pause (To insert whatever code in necessary for subsections)
+pause(5);  
+
+% Rotate the plate back to the original position
+MoveCounterClockWise(thisStepper, speed, 3 * (2048/4));
+
+
+Multiple_Stepper_String = append("1,", int2str(steps_for_1),",","2,",int2str(steps_for_2));
+
+write(s, Multiple_Stepper_String, 'string');
+
