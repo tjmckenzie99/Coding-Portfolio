@@ -3,7 +3,7 @@ clc;
 close all;
 
 % Load the narrowband SPL data from an Excel file
-filename = 'Homework_2_Mavic_Pro_SPL.xlsx';
+filename = 'Mavic_Pro_SPL.xlsx';
 data = readtable(filename, 'Sheet', 'narrow band', 'VariableNamingRule', 'preserve');
 
 % Extract frequency (Hz) and SPL (dB) values

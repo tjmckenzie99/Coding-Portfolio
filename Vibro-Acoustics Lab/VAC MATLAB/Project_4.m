@@ -6,8 +6,8 @@ clc;
 close all;
 
 % Loads the pressure data from Excel File
-filename = 'Homework_4_Compressor_Data_2025.xlsx';
-data = readtable('Homework_4_Compressor_Data_2025.xlsx', 'Sheet', 'Point Data', 'VariableNamingRule','preserve');
+filename = 'Compressor_Data_2025.xlsx';
+data = readtable('Compressor_Data_2025.xlsx', 'Sheet', 'Point Data', 'VariableNamingRule','preserve');
 P_ref = 20*10^(-6);
 r = 0.5;
 N_total = 2048;
