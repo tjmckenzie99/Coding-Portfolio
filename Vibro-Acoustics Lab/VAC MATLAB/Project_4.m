@@ -92,7 +92,7 @@ spw_total_L = 10.^(spw_B1/10) + 10.^(spw_B2/10) + ...
 spw_total = 10*log10(spw_total_L);
 
 % Retrieve Sound Intensity Data
-data2 = readtable('Homework_4_Compressor_Data_2025.xlsx', 'Sheet', 'Scan Data', 'VariableNamingRule','preserve');
+data2 = readtable('Compressor_Data_2025.xlsx', 'Sheet', 'Scan Data', 'VariableNamingRule','preserve');
 W_ref = 10^(-12);
 
 % Area Calculations
